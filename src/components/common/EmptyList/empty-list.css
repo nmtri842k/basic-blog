@@ -1,0 +1,9 @@
+.empty-list-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.empty-list-wrap img {
+    width: 100%;
+    max-width: 400px;
+}

@@ -1,0 +1,34 @@
+.search-bar-wrap {
+    background-color: #f0f0f0;
+    width: fit-content;
+    margin: 2.5rem auto 4rem auto;
+    padding: .5rem;
+    border-radius: 10px;
+
+}
+
+.search-bar-wrap form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar-wrap input {
+    background-color: #f0f0f0;
+    outline: none;
+    border: none;
+}
+
+.search-bar-wrap span {
+    padding-right: .5rem;
+    cursor: pointer;
+}
+
+.search-bar-wrap button {
+    outline: none;
+    border: none;
+    padding: .3rem;
+    border-radius: 10px;
+    background-color: #6cadee;
+    cursor: pointer;
+    color: #fff;
+}
