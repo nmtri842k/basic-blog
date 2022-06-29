@@ -12,24 +12,25 @@ const Blog = () => {
     const { id } = useParams()
     const [blog, setBlog] = useState(null)
     useEffect(() => {
-        let blog = blogList.find(blog => blog.id === parseInt(id))
+        let blog = blogList.find((blog) => blog.id === parseInt(id));
         if (blog) {
-            setBlog(blog)
+            setBlog(blog);
+            console.log(blog.id)
         }
-    }, [])
+    }, [id]);
     return (
         <div>
             <Link to="/" className="link-goback">Go back
             </Link>
             {
-                blog ? (<div className="blog-wrap">
+                blog ? (<div className="blog-wrap" key={blog.id}>
                     <header>
                         <p className="blog-date">{blog.createdAt}</p>
                         <h1>{blog.title}</h1>
                         <div className="blogSubCategory">
                             {
                                 blog.subCategory.map((category, i) => (
-                                    <div><Chip key={i} label={category} className="chip" />
+                                    <div key={i}><Chip label={category} key={i} className="chip" />
                                     </div>))
                             }
                         </div>
